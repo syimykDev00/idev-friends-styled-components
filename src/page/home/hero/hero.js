@@ -17,17 +17,37 @@ const HEROTEXTONE = styled.h1`
     color: black;
     font-size: 55px;
     font-weight: 600;
+    @media (max-width: 576px) {
+        font-size: 50px;    
+    }
+    @media (max-width: 450px) {
+        font-size: 46px;
+    }
+    @media (max-width: 320px) {
+        font-size: 40px;
+    }
 `
 
 const HEROTEXTTWO = styled.p`
     width: 1000px;
     padding: 20px 0;
     margin: 0 auto;
-    color: 17px
+    line-height: 30px;
+    color: black;
+    font-size: 17px;
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
 `
 
 const IMAGE = styled.img`
     width: 70%;
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
 `
 
 const Hero = () => {

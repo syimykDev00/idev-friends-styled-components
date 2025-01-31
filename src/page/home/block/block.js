@@ -14,6 +14,12 @@ const BLOCKTEXTONE = styled.h1`
     color: black;
     text-align: center;
     font-size: 45px;
+    @media (max-width: 400px) {
+        font-size: 40px;
+    }
+    @media (max-width: 400px) {
+        font-size: 35px;
+    }
 `;
 
 const BLOCKTEXTTWO = styled.p`
@@ -24,6 +30,9 @@ const BLOCKTEXTTWO = styled.p`
     margin: 0 auto;
     font-size: 17px;
     line-height: 30px;
+    @media (max-width: 400px) {
+        font-size: 16px;
+    }
 `;
 
 const BLOCK = styled.div`
@@ -35,6 +44,12 @@ const BLOCK = styled.div`
     &:hover {
         background: red;
     }
+    @media (max-width: 1024px) {
+        margin: 0 20px 40px 20px;
+    }
+    @media (max-width: 450px) {
+        margin: 0 0 40px 0;
+    }
 `;
 
 
@@ -42,6 +57,14 @@ const BLOCKGENERAL = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media (max-width: 450px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Block = () => {

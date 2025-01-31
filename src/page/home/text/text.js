@@ -10,22 +10,56 @@ const TEXTCONTAINER = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
+`;
+
+const TEXTGROUP = styled.div`
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 35px;
+    }
 `;
 
 const GROUPTEXTONE = styled.h1`
     color: black;
     font-size: 45px;
     padding-bottom: 30px;
+    @media (max-width: 768px) {
+        width: 90%;
+        font-size: 43px;
+    }
+    @media (max-width: 400px) {
+        font-size: 40px;
+    }
+    @media (max-width: 320px) {
+        font-size: 35px;
+    }
 `
 
 const GROUPTEXTTWO = styled.p`
     color: black;
     font-size: 17px;
     width: 700px;
+    line-height: 30px;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+    @media (max-width: 400px) {
+        font-size: 16px;
+    }
 `
 
 const TEXTIMAGE = styled.img`
     height: 450px;
+    @media (max-width: 576px) {
+        width: 90%;
+        height: auto;
+    }
 `
 
 const Text = () => {
@@ -33,7 +67,7 @@ const Text = () => {
         <TEXTID id="text">
             <CONTAINER className="container">
                 <TEXTCONTAINER className="text">
-                    <div className="text-group">
+                    <TEXTGROUP className="text-group">
                         <GROUPTEXTONE>Hello Styled Components</GROUPTEXTONE>
                         <GROUPTEXTTWO>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eos facere in inventore labore
                             molestias reprehenderit sapiente similique tempora. A commodi deleniti dicta earum eligendi
@@ -49,7 +83,7 @@ const Text = () => {
                             exercitationem, id incidunt ipsam labore magni mollitia nemo nostrum odio perferendis porro
                             quibusdam quidem quisquam sapiente tempora totam voluptas voluptate? Aut, perferendis,
                             repellat.</GROUPTEXTTWO>
-                    </div>
+                    </TEXTGROUP>
                     <TEXTIMAGE src={'https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25085005/reactjs-inner.svg'} alt="img"/>
                 </TEXTCONTAINER>
             </CONTAINER>

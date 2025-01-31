@@ -28,6 +28,9 @@ const NAVBAR = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 992px) {
+        display: none;
+    }
 `;
 
 const BTN = styled.button`
@@ -37,6 +40,9 @@ const BTN = styled.button`
     border-radius: 6px;
     &:hover {
         background: black;
+    }
+    @media (max-width: 992px) {
+        display: none;
     }
 `;
 
